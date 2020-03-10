@@ -33,6 +33,9 @@ urlpatterns = [
     re_path('^$', views.index),
     url('^demo/$', views.demo),
     url('^demo/page=(\d+)$', views.page),
+    # 匹配archive/018/10.htm
+    path("archive/<year>/<month>.html", views.home1),
+    url(r'^archive1/(?P<year>[0-9]{4})/(?P<month>[0-9]{1,2}).html$', views.home1)
 ]
 
 # url函数
